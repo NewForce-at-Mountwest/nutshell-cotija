@@ -1,0 +1,47 @@
+{
+    "Users": [
+        {
+            "id": 1,
+            "username": "Steve",
+            "email": "me@me.com",
+            "UserPassword":"TheMonkey"
+        },
+        {
+            "id": 2,
+            "username": "Jacob",
+            "email": "jsnake@perry.com",
+            "UserPassword":"TheSnake"
+        }
+    ],
+    "Messages": [
+        {
+            "id": 1,
+            "userId": 1,
+            "message": "What's up?"
+        },
+        {
+            "id":2,
+            "userId":2,
+            "message":"Hello"
+        }
+    ],
+    "News": [
+        {
+            "id": 1,
+            "userId": 2,
+            "url": "https://www.quantamagazine.org/newfound-wormhole-allows-information-to-escape-black-holes-20171023/",
+            "title": "Wormholes Allow Information to Escape Black Holes",
+            "synopsis": "Check out this recent discovery about workholes"
+        }
+    ],
+    "Tasks": [
+        {
+            "id": 1,
+            "userId": 2,
+            "task": "Take out garbage"
+        },
+        {"id":2,
+        "userId":1,
+    "task":"pass me that sugar"}
+    ]
+}
