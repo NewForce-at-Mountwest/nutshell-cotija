@@ -1,0 +1,11 @@
+{
+    "name": "your-application",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+      "start": "webpack-dev-server --mode development"
+    },
+    "keywords": [],
+    "author": "Your Name",
+    "license": "MIT"
+  }
