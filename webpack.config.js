@@ -25,7 +25,7 @@ module.exports = {
   },
   plugins: [
     new WebpackShellPlugin({
-      onBuildEnd: ["json-server -p 8080 -w api/database.json"]
+      onBuildEnd: ["json-server -p 3000 -w api/nutshell.json"]
     }),
     new HtmlWebPackPlugin({
       template: "./src/index.html",
