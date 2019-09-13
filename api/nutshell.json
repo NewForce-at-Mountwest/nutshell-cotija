@@ -41,17 +41,35 @@
       "email": "askd",
       "UserPassword": "asda",
       "id": 7
+    },
+    {
+      "username": "Steve",
+      "email": "me@me.com",
+      "UserPassword": "TheMonkey",
+      "id": 8
+    },
+    {
+      "username": "Steve",
+      "email": "me@me.com",
+      "UserPassword": "TheMonkey",
+      "id": 9
+    },
+    {
+      "username": "Steve",
+      "email": "me@me.com",
+      "UserPassword": "TheMonkey",
+      "id": 10
     }
   ],
   "Messages": [
     {
       "id": 1,
-      "userId": 1,
+      "UserId": 1,
       "message": "What's up?"
     },
     {
       "id": 2,
-      "userId": 2,
+      "UserId": 2,
       "message": "Hello"
     }
   ],
