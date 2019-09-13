@@ -1,6 +1,16 @@
+// <--- CLICK EVENT FOR REGISTERING ACCOUNTS ---> //
+
+
 import registerClickEvents from "./ClickEvents/UsersRegisterClicks.js"
+import taskClickEvents from "./ClickEvents/TasksClicks.js"
 
 registerClickEvents.createAccount()
+taskClickEvents.buildTask()
+
+
+
+// <--- CLICK EVENT FOR CHAT STUFF ---> //
+
 import renderChat from "../scripts/domPrinter/ChatPrinter.js"
 import apiChat from "../scripts/apiManagers/Chatapi.js"
 apiChat.getAllMessages()
