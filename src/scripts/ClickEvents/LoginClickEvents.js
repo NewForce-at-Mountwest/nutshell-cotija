@@ -7,7 +7,9 @@ document.querySelector("#login-button").addEventListener("click", function(){
   const usernameInfo = document.querySelector("#username-input").value
   const passwordInfo = document.querySelector("#password-input").value
   // console.log(usernameInfo, passwordInfo)
-
 })}}
+
+
+
 
 export default LoginClickEvents

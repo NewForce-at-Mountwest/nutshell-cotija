@@ -1,1 +1,3 @@
-// write a function that goes to the users api and checks if the username and password work with anyone in the database
+fetch('http://localhost/3000/Users').then(function(response) {  
+    console.log
+    
