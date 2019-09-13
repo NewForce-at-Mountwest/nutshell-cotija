@@ -106,12 +106,12 @@
   "Messages": [
     {
       "id": 1,
-      "userId": 1,
+      "UserId": 1,
       "message": "What's up?"
     },
     {
       "id": 2,
-      "userId": 2,
+      "UserId": 2,
       "message": "Hello"
     }
   ],

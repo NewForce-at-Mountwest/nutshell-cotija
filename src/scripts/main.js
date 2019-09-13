@@ -4,6 +4,7 @@
 import registerClickEvents from "./ClickEvents/UsersRegisterClicks.js"
 import taskClickEvents from "./ClickEvents/TasksClicks.js"
 
+import sendChatButtonFunction from "./ClickEvents/ChatClicks.js"
 registerClickEvents.createAccount()
 taskClickEvents.buildTask()
 
@@ -22,4 +23,6 @@ document.querySelector("#chatroom").innerHTML+= `<fieldset>
 <br>
 <input type="text" name="chat" id="Chatinput">
 </fieldset>
-<button id="Send" type="submit">Send</button>`
+<button id="Sendmsg" type="submit">Send</button>`;
+
+sendChatButtonFunction()
