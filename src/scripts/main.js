@@ -1,4 +1,4 @@
-import registerClickEvents from "./ClickEvents/UsersRegisterClicks"
+import registerClickEvents from "./ClickEvents/UsersRegisterClicks.js"
 
 registerClickEvents.createAccount()
 import renderChat from "../scripts/domPrinter/ChatPrinter.js"

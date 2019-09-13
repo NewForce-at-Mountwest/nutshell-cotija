@@ -1,4 +1,4 @@
-import registerApiManager from "/Users/newforce42/workspace/foundations/Group Projects/nutshell/nutshell-cotija/src/scripts/apiManagers/UsersRegisterapi.js";
+import registerApiManager from "../apiManagers/UsersRegisterapi.js";
 
 const registerClickEvents = {
 	createAccount: () => {
