@@ -13,5 +13,11 @@ testButton.addEventListener("click", function(){
 
     const newsSumInput = document.querySelector("#news-sum").value;
 
+    console.log(newsTitleInput, newsUrlInput, newsSumInput);
 
+    newsObjectToPost ={
+        title: newsTitleInput,
+        url: newsUrlInput,
+        synopsis: newsSumInput,
+    }
 })
