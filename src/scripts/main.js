@@ -2,6 +2,8 @@ import LoginClickEvents from "./ClickEvents/LoginClickEvents"
 LoginClickEvents.login()
 import registerClickEvents from "./ClickEvents/UsersRegisterClicks.js"
 
+
+
 registerClickEvents.createAccount()
 import renderChat from "../scripts/domPrinter/ChatPrinter.js"
 import apiChat from "../scripts/apiManagers/Chatapi.js"
@@ -15,3 +17,5 @@ document.querySelector("#chatroom").innerHTML+= `<fieldset>
 <input type="text" name="chat" id="Chatinput">
 </fieldset>
 <button id="Send" type="submit">Send</button>`
+
+LoginClickEvents.login()
