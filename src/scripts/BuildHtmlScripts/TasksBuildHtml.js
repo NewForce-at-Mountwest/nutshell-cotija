@@ -1,5 +1,8 @@
+//build card that will be used for printing tasks
 const taskHTML = {
+    //function for building task card
 	buildTask: taskObject => {
+        //html string of the card itself
         return `
         <section class="task-card" id="task-card-${taskObject.id}">
           <h3><b>${taskObject.user.username}</b></h3>
