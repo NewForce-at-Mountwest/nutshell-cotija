@@ -1,3 +1,5 @@
+// <--- start of alex's code --- stay pretty bois --->
+
 // <--- IMPORT API MANAGERS AND CLICK EVENTS --->
 import taskApiManager from "./apiManagers/tasksapi.js";
 import registerClickEvents from "./ClickEvents/UsersRegisterClicks.js";
@@ -16,10 +18,7 @@ taskApiManager.getTasks().then(parsedTasks => {
 	taskDomPrinter.printTasks(parsedTasks);
 });
 
-
-
-
-
+// <--- end of alex's code beep boop --->
 
 import sendChatButtonFunction from "./ClickEvents/ChatClicks.js";
 import renderChat from "../scripts/domPrinter/ChatPrinter.js";
