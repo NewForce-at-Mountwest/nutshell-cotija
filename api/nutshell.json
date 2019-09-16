@@ -1,121 +1,49 @@
 {
-  "Users": [
+  "users": [
     {
       "id": 1,
       "username": "Steve",
       "email": "me@me.com",
-      "UserPassword": "TheMonkey"
+      "userPassword": "TheMonkey"
     },
     {
       "id": 2,
       "username": "Jacob",
       "email": "jsnake@perry.com",
-      "UserPassword": "TheSnake"
+      "userPassword": "TheSnake"
     },
     {
       "username": "ASDAS",
       "email": "ASDAS",
-      "UserPassword": "ASD",
+      "userPassword": "ASD",
       "id": 3
     },
     {
-      "username": "",
-      "email": "",
-      "UserPassword": "",
-      "id": 4
-    },
-    {
-      "username": "",
-      "email": "",
-      "UserPassword": "",
-      "id": 5
-    },
-    {
-      "username": "",
-      "email": "",
-      "UserPassword": "",
-      "id": 6
-    },
-    {
-      "username": "",
-      "email": "",
-      "UserPassword": "",
-      "id": 7
-    },
-    {
-      "username": "florg",
-      "email": "glorp",
-      "UserPassword": "plobf",
-      "id": 8
-    },
-    {
-      "username": "glup",
-      "email": "glup",
-      "UserPassword": "glup",
-      "id": 9
+      "username": "ASDAS",
+      "email": "ASDAS",
+      "userPassword": "ASD",
+      "id": 18
     },
     {
       "username": "asd",
       "email": "asd",
-      "UserPassword": "asd",
-      "id": 10
-    },
-    {
-      "username": "",
-      "email": "",
-      "UserPassword": "",
-      "id": 11
-    },
-    {
-      "username": "",
-      "email": "",
-      "UserPassword": "",
-      "id": 12
-    },
-    {
-      "username": "",
-      "email": "",
-      "UserPassword": "",
-      "id": 13
-    },
-    {
-      "username": "",
-      "email": "",
-      "UserPassword": "",
-      "id": 14
-    },
-    {
-      "username": "blorp",
-      "email": "blorp",
-      "UserPassword": "blorp",
-      "id": 15
-    },
-    {
-      "username": "glorp",
-      "email": "glorp",
-      "UserPassword": "gjgdkand",
-      "id": 16
-    },
-    {
-      "username": "lreagm",
-      "email": "gkrangalk",
-      "UserPassword": "gaklndlgda",
-      "id": 17
+      "userPassword": "aeaea",
+      "id": 19
     }
   ],
-  "Messages": [
+  "messages": [
     {
       "id": 1,
-      "UserId": 1,
+      "userId": 1,
       "message": "What's up?"
     },
     {
       "id": 2,
-      "UserId": 2,
+      "userId": 2,
       "message": "Hello"
     }
   ],
-  "News": [
+  "news": [
     {
       "id": 1,
       "userId": 2,
@@ -124,7 +52,7 @@
       "synopsis": "Check out this recent discovery about workholes"
     }
   ],
-  "Tasks": [
+  "tasks": [
     {
       "id": 1,
       "userId": 2,
@@ -136,49 +64,9 @@
       "task": "pass me that sugar"
     },
     {
-      "userId": "16",
-      "task": {},
+      "userId": 19,
+      "task": "glurpglorp",
       "id": 3
-    },
-    {
-      "userId": "16",
-      "task": {},
-      "id": 4
-    },
-    {
-      "userId": 16,
-      "task": {},
-      "id": 5
-    },
-    {
-      "userId": 17,
-      "task": {},
-      "id": 6
-    },
-    {
-      "userId": 17,
-      "task": {},
-      "id": 7
-    },
-    {
-      "userId": 17,
-      "task": "dagnal",
-      "id": 8
-    },
-    {
-      "userId": 17,
-      "task": "glurple",
-      "id": 9
-    },
-    {
-      "userId": 17,
-      "task": "asda",
-      "id": 10
-    },
-    {
-      "userId": 17,
-      "task": "asd",
-      "id": 11
     }
   ]
 }

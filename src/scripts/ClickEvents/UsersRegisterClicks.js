@@ -8,7 +8,7 @@ const registerClickEvents = {
 				const accountToCreate = {
 					username: document.querySelector("#register-username").value,
 					email: document.querySelector("#register-email").value,
-					UserPassword: document.querySelector("#register-password").value
+					userPassword: document.querySelector("#register-password").value
 				};
 				registerApiManager.createAccount(accountToCreate).then(parsedUser => {
 					localStorage.setItem("activeUser", parsedUser.id);

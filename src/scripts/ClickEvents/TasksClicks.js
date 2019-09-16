@@ -1,3 +1,4 @@
+import taskDomPrinter from "../domPrinter/TasksPrinters.js";
 import taskApiManager from "../apiManagers/tasksapi.js";
 
 const taskClickEvents = {
@@ -12,6 +13,19 @@ const taskClickEvents = {
 				taskApiManager.createTask(taskToCreate);
 				document.querySelector("#create-task-input").value = "";
 			});
+	},
+	deleteTask: () => {
+		document.querySelector("body").addEventListener("click", function() {
+			if (event.target.id.includes("delete-task")) {
+				const taskToDelete = event.target.id.split("-")[2];
+				taskApiManager
+					.deleteTask(taskToDelete)
+					.then(taskApiManager.getTasks)
+					.then(parsedTasks => {
+						taskDomPrinter.printTasks(parsedTasks);
+					});
+			}
+		});
 	}
 };
 
