@@ -1,4 +1,5 @@
 import Chatinfo from "../BuildHtmlScripts/ChatBuildHtml.js"
+// variable holding function to loop through array and print to DOM
 const renderChat = {
     buildChatCard:arrayParam => {
         document.querySelector("#chat").innerHTML = "";
