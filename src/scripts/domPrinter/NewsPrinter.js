@@ -1,11 +1,19 @@
 // Imports
-import makeNewsComponent from "./BuildHtmlScripts/NewsBuildHtml.js";
+import newsBuildHtml from "../BuildHtmlScripts/NewsBuildHtml.js";
 
 // Printing News to the DOM
-const renderNewsEntries = (entries) => {
+ const printNewsToDom = {
+ renderNewsEntries: (entries) => {
 
-    entries.forEach( singleEntry => {
-      document.querySelector(".newsContainer").innerHTML += makeNewsComponent.buildNewsCard(singleEntry)})}
+  entries.forEach(singleEntry => {
+    document.querySelector("#newsContainer").innerHTML += newsBuildHtml.buildNewsCard(singleEntry)
+  })},
 
+  printNewsEntries:(entriesSubmitted) =>{
+    entriesSubmitted.forEach(singleEntrySubmitted=>{
+      document.querySelector("#insideNewsContainer").innerHTML += newsBuildHtml.buildNewsCard(singleEntrySubmitted)
+    })
+  }
+}
 // Export
-export default renderNewsEntries;
+export default printNewsToDom;

@@ -55,7 +55,7 @@
       "message": "Hello"
     }
   ],
-  "News": [
+  "news": [
     {
       "id": 1,
       "userId": 2,
