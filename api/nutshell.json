@@ -1,5 +1,5 @@
 {
-  "Users": [
+  "users": [
     {
       "id": 1,
       "username": "Steve",
@@ -13,9 +13,9 @@
       "UserPassword": "TheSnake"
     },
     {
-      "username": "",
-      "email": "",
-      "UserPassword": "",
+      "username": "Fred",
+      "email": "Fred@mannequin.com",
+      "UserPassword": "TheMannequin",
       "id": 3
     },
     {
@@ -64,13 +64,28 @@
   "Messages": [
     {
       "id": 1,
-      "UserId": 1,
+      "userId": 1,
       "message": "What's up?"
     },
     {
       "id": 2,
-      "UserId": 2,
+      "userId": 2,
       "message": "Hello"
+    },
+    {
+      "message": "sup",
+      "userId": 3,
+      "id": 3
+    },
+    {
+      "message": "sup",
+      "userId": 3,
+      "id": 4
+    },
+    {
+      "message": "adffdfd",
+      "userId": 3,
+      "id": 5
     }
   ],
   "news": [

@@ -9,6 +9,7 @@ apiChat.getAllMessages()
 .then(parsedMessages=>{
     renderChat.buildChatCard(parsedMessages)
 })
+// Prints chat input and button
 document.querySelector("#chatroom").innerHTML+= `<fieldset>
 <label for="chat">Chatroom</label>
 <br>

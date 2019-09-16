@@ -1,8 +1,8 @@
 
-// variable holding function to print message and sender
+// variable holding function to print message and sender username
 const Chatinfo = {
     buildChatCard:(chatInput)=>{
-        return `<article>${chatInput.message}--${chatInput.User.username}</article> `
+        return `<article>${chatInput.message}--${chatInput.user.username}</article> `
     }
 };
 export default Chatinfo;
