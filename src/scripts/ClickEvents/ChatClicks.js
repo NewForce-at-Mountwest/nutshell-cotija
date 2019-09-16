@@ -11,7 +11,7 @@ console.log(chatinput)
 // new message structure
 const msgObject= {
     "message": chatinput,
-    "userId": 3}
+    "userId": localStorage.getItem("userId")}
     // posts new message to json
 apiChat.postOneMessage(msgObject)
 // gets all messages and prints
