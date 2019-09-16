@@ -33,7 +33,7 @@ const newsClickEvents = {
 
 
     deleteButtonFunction: () => {
-        document.querySelector("#insideNewsContainer").addEventListener("click", function () {
+        document.querySelector("#newsContainer").addEventListener("click", function () {
 
             if (event.target.id.includes("delete")) {
                 console.log(event.target.id)
@@ -45,18 +45,14 @@ const newsClickEvents = {
                 console.log(idOfEntryToDelete);
 
                 apiNews.deleteNewsEntry(idOfEntryToDelete)
-                    .then(() => {
-                        apiNews.getAllEntries()
-
-
-
-                    })
+                    .then(() => apiNews.getAllEntries)
+                    .then(() => printNewsToDom.renderNewsEntries)
             }
         })},
 
         // Edit Button Click Event
         editButtonFunction: ()=>{
-            document.querySelector("#insideNewsContainer").addEventListener("click", function () {
+            document.querySelector("#newsContainer").addEventListener("click", function () {
 
             if (event.target.id.includes("edit")) {
                 console.log(event.target.id)

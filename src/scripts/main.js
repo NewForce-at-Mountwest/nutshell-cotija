@@ -19,5 +19,6 @@ document.querySelector("#chatroom").innerHTML+= `<fieldset>
 
 newsBuildHtml.mainNews();
 newsClickEvents.submitfunction();
+newsClickEvents.deleteButtonFunction();
 
 sendChatButtonFunction()
