@@ -6,7 +6,8 @@ const taskDomPrinter = {
 		//select container to output to
 		document.querySelector("#task-output").innerHTML = "";
 		//empty string to build upon
-		let tasksString = "";
+        let tasksString = "";
+        //loop through the array of tasks
 		for (let i = 0; i < arrayOfTasks.length; i++) {
 			tasksString += tasksHTML.buildTasks(arrayOfTasks[i]);
 		}
