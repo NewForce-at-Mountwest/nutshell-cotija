@@ -3,7 +3,7 @@
 
 const newsBuildHtml= {
  mainNews:() =>{
- document.querySelector("#newsContainer").innerHTML =
+ document.querySelector("#newsContainerA").innerHTML =
  `
         <fieldset>
         <label for="newsTitle">Title</label>

@@ -4,14 +4,14 @@ import newsBuildHtml from "../BuildHtmlScripts/NewsBuildHtml.js";
 // Printing News to the DOM
 const printNewsToDom = {
   renderNewsEntries: (entries) => {
-    document.querySelector("#insideNewsContainer").innerHTML = ""
+    document.querySelector("#newsContainerB").innerHTML = ""
     entries.forEach(singleEntry => {
-      document.querySelector("#insideNewsContainer").innerHTML += newsBuildHtml.buildNewsCard(singleEntry)
+      document.querySelector("#newsContainerB").innerHTML += newsBuildHtml.buildNewsCard(singleEntry)
     })
   },
 
   editNewsEntries: (objectToEdit) => {
-    document.querySelector("#insideNewsContainer").innerHTML += newsBuildHtml.editNewsCard(objectToEdit)
+    document.querySelector("#newsContainerB").innerHTML += newsBuildHtml.editNewsCard(objectToEdit)
   }
 }
 

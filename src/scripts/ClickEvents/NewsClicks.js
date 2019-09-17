@@ -39,7 +39,7 @@ const newsClickEvents = {
 
 
     deleteButtonFunction: () => {
-        document.querySelector("#insideNewsContainer").addEventListener("click", function () {
+        document.querySelector("#newsContainerB").addEventListener("click", function () {
 
             if (event.target.id.includes("delete")) {
                 console.log(event.target.id)
@@ -60,7 +60,7 @@ const newsClickEvents = {
         })
     },
     editButtonFunction: () => {
-        document.querySelector("#insideNewsContainer").addEventListener("click", function () {
+        document.querySelector("#newsContainerB").addEventListener("click", function () {
             if (event.target.id.includes("news-button-edit")) {
                 console.log(event.target.id)
                 console.log(event.target.id.split("-"));
@@ -77,7 +77,7 @@ const newsClickEvents = {
     },
     //    Save News Button in Edit Card
     saveButtonFunction: () => {
-        document.querySelector("#insideNewsContainer").addEventListener("click", function () {
+        document.querySelector("#newsContainerB").addEventListener("click", function () {
 
             if (event.target.id.includes("news-save-button")) {
                 console.log(event.target.id)
