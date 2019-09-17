@@ -7,22 +7,23 @@
     <title>Nutshell</title>
 </head>
 <body>
+	<h1>Welcome!</h1>
 
 <!-- this is the login HTML form -->
 		<div id= "login-border">
 				<form id="login-form">
 					<br>Username
-					<input id="username-input" type="text" name="username" value="username">
+					<input id="username-input" type="text" name="username" placeholder="username">
 					<br>
 					<br> Password
-					<input id="password-input" type="text" name="password" value="password">
+					<input id="password-input" type="text" name="password" placeholder="password">
 					<br><br>
-					<button id="login-button" onclick="window.location.reload();">Login</button>
+					<button id="login-button">Login</button>
 				  </form>
 		</div>
 <!-- THIS IS THE END OF THE LOGIN FORM -->
 
-
+<!-- here is the chat form -->
     <div id="chatroom"></div>
     <div id="chat"></div>
 
@@ -44,7 +45,15 @@
 		<!-- chat input is chatroom -->
 		<div id="chatroom"></div>
 		<!-- chat is output -->
-        <div id="chat"></div>
+		<div id="chat"></div>
+
+<!-- here is the code for the events form -->
+<div id= "events-border">
+		<input id="event-form"></input>
+		<button id="event-button">Submit New Event</button>
+</div>
+
+
 		<section id="tasks-container"></section>
 	</body>
 </html>

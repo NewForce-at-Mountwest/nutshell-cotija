@@ -3,7 +3,7 @@ import sendChatButtonFunction from "./ClickEvents/ChatClicks.js"
 import renderChat from "../scripts/domPrinter/ChatPrinter.js"
 import apiChat from "../scripts/apiManagers/Chatapi.js"
 import Login from "../scripts/ClickEvents/LoginClickEvents.js"
-
+import Event from "../scripts/ClickEvents/EventsClicks.js"
 
 // brings all messages to the DOM
 apiChat.getAllMessages()
@@ -23,5 +23,6 @@ document.querySelector("#chatroom").innerHTML+= `<fieldset>
 sendChatButtonFunction()
 registerClickEvents.createAccount()
 Login.loginClickEvent()
+Event.eventClickEvent()
 
 
