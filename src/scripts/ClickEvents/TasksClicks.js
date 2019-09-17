@@ -22,12 +22,18 @@ const taskClickEvents = {
 				// <--- CREATE OBJECT TO STORE IN THE JSON AND STORE IT IN A VARIABLE --->
 				const taskToCreate = {
 					userId: parseInt(localStorage.getItem("activeUser")),
-					task: document.querySelector("#create-task-input").value
+                    task: document.querySelector("#create-task-input").value,
+                    completed: false
 				};
 				// <--- CALL THE API MANAGER FUNCTION AND POST THE OBJECT TO THE JSON --->
-				taskApiManager.createTask(taskToCreate);
-				// <--- RESET THE VALUE OF THE INPUT--->
-				document.querySelector("#create-task-input").value = "";
+				taskApiManager
+					.createTask(taskToCreate)
+					.then(taskApiManager.getTasks)
+					.then(parsedTasks => {
+						taskDomPrinter.printTasks(parsedTasks);
+						// <--- RESET THE VALUE OF THE INPUT--->
+						document.querySelector("#create-task-input").value = "";
+					});
 			});
 	},
 	// <--- FUNCTION TO DELETE TASK --->
@@ -63,7 +69,9 @@ const taskClickEvents = {
 				`#edit-task-input-${idToGet}`
 			).value;
 			const editedTaskEntry = {
-				task: editedTaskValue
+                userId: parseInt(localStorage.getItem("activeUser")),
+                task: editedTaskValue,
+                completed: false
 			};
 			taskApiManager.editTask(idToGet, editedTaskEntry).then(() => {
 				taskApiManager.getTasks().then(allTasks => {
@@ -71,7 +79,11 @@ const taskClickEvents = {
 				});
 			});
 		}
-	}
+    },
+    // checkTask: () => {
+    //     if(event.target.id.includes("#task-checkbox"))
+
+    // }
 };
 
 export default taskClickEvents;

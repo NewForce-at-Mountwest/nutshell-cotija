@@ -86,20 +86,25 @@
     {
       "id": 1,
       "userId": 2,
-      "task": "Take out garbage"
+      "task": "Take out garbage",
+      "completed": "false"
     },
     {
       "id": 2,
       "userId": 1,
-      "task": "pass me that sugar"
-    },
-    {
-      "task": "testersonsdsd",
-      "id": 3
+      "task": "pass me that sugar",
+      "completed": "false"
     },
     {
       "userId": 19,
-      "task": "asafdafda",
+      "task": "get gud scrub",
+      "id": 3,
+      "completed": "false"
+    },
+    {
+      "userId": 19,
+      "task": "shoop da whoop",
+      "completed": false,
       "id": 4
     }
   ]

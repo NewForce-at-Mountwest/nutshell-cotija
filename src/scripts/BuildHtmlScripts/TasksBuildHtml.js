@@ -5,8 +5,9 @@ const tasksHTML = {
 		//html string of the card itself
 		return `
         <section class="task-card" id="task-card-${taskObject.id}">
-          <h3><b>${taskObject.user.username}</b></h3>
-            <p>${taskObject.task}</p>
+                <br>
+                <input type="checkbox" id="task-checkbox-${taskObject.id}></input>
+                <p id="task-object-thing">${taskObject.task}</p>
                 <button id="edit-task-button-${taskObject.id}">Edit</button>
                 <button id="delete-task-button-${taskObject.id}">Delete</button>
         </section>

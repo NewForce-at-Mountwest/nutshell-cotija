@@ -2,8 +2,8 @@
 
 const taskApiManager = {
 	//get all the tasks from JSON and parse them to JS
-	getTasks: () => {
-		return fetch("http://localhost:3000/tasks?_expand=user").then(response =>
+	getTasks: (userId) => {
+		return fetch(`http://localhost:3000/tasks/${userId}`).then(response =>
 			response.json()
 		);
 	},
@@ -34,8 +34,26 @@ const taskApiManager = {
 			headers: {
 				"Content-Type": "application/json"
 			},
-			body: JSON.stringify(taskToEdit).then(response => response.json())
-		})
+			body: JSON.stringify(taskToEdit)
+		}),
+	markAsComplete: id => {
+		return fetch(`http://localhost:3000/tasks/${id}`, {
+			method: "PATCH",
+			headers: {
+				"Content-Type": "application/json"
+			},
+			body: JSON.stringify({ completed: "true" })
+		});
+	},
+	markAsIncomplete: id => {
+		return fetch(`http://localhost:3000/tasks/${id}`, {
+			method: "PATCH",
+			headers: {
+				"Content-Type": "application/json"
+			},
+			body: JSON.stringify({ completed: "false" })
+		});
+	}
 };
 
 export default taskApiManager;
