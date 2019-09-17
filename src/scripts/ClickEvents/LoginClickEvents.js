@@ -4,7 +4,7 @@ const Login ={
 loginClickEvent:()=>{
 
 document.querySelector("#login-button").addEventListener("click", () => {
-  // Get the username and password values from the form
+  // Get the username and password values from the form on the html
   console.log("the button works!")
   const usernameValue = document.querySelector("#username-input").value;
   const passwordValue = document.querySelector("#password-input").value;
