@@ -83,9 +83,24 @@
       "id": 4
     },
     {
-      "message": "adffdfd",
-      "userId": 3,
+      "message": "hey",
+      "userId": "1",
       "id": 5
+    },
+    {
+      "message": "hey",
+      "userId": "1",
+      "id": 6
+    },
+    {
+      "message": "who are you?",
+      "userId": "1",
+      "id": 7
+    },
+    {
+      "message": "who am i",
+      "userId": "2",
+      "id": 8
     }
   ],
   "news": [

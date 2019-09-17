@@ -7,6 +7,7 @@ import newsBuildHtml from "./BuildHtmlScripts/NewsBuildHtml.js";
 import Login from "../scripts/ClickEvents/LoginClickEvents.js"
 import apiNews from "./apiManagers/Newsapi.js";
 import printNewsToDom from "./domPrinter/NewsPrinter.js"
+import Login from "./ClickEvents/LoginClickEvents.js"
 
 
 // brings all messages to the DOM
@@ -37,7 +38,7 @@ newsClickEvents.saveButtonFunction();
 // // calls function to send a new message to json and reprint
 
 sendChatButtonFunction()
+
 registerClickEvents.createAccount()
 Login.loginClickEvent()
-
 
