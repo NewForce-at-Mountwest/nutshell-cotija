@@ -90,41 +90,10 @@
   ],
   "news": [
     {
-      "id": 1,
-      "userId": 2,
-      "url": "https://www.quantamagazine.org/newfound-wormhole-allows-information-to-escape-black-holes-20171023/",
-      "title": "Wormholes Allow Information to Escape Black Holes",
-      "synopsis": "Check out this recent discovery about workholes"
-    },
-    {
-      "title": "asd ",
-      "url": "asd",
-      "synopsis": "asd",
-      "id": 2
-    },
-    {
-      "title": "",
-      "url": "",
-      "synopsis": "",
-      "id": 4
-    },
-    {
-      "title": "asd",
-      "url": "asdasd",
-      "synopsis": "asdasd",
-      "id": 5
-    },
-    {
-      "title": "asd",
-      "url": "asd",
-      "synopsis": "asd",
-      "id": 6
-    },
-    {
-      "title": "asda",
-      "url": "asd",
-      "synopsis": "asd",
-      "id": 7
+      "title": "Nike Pulls New Clothing",
+      "url": "https://sports.theonion.com/nike-recalls-sweat-wicking-shirts-that-pulled-gallons-o-1838185582",
+      "synopsis": "Clothing that soaks sweat pulled from Nike's line",
+      "id": 24
     }
   ],
   "Tasks": [

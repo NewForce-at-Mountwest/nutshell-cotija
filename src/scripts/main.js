@@ -5,6 +5,8 @@ import renderChat from "../scripts/domPrinter/ChatPrinter.js"
 import apiChat from "../scripts/apiManagers/Chatapi.js"
 import newsBuildHtml from "./BuildHtmlScripts/NewsBuildHtml.js";
 import Login from "../scripts/ClickEvents/LoginClickEvents.js"
+import apiNews from "./apiManagers/Newsapi.js";
+import printNewsToDom from "./domPrinter/NewsPrinter.js"
 
 
 // brings all messages to the DOM
@@ -23,6 +25,11 @@ document.querySelector("#chatroom").innerHTML+= `<fieldset>
 newsBuildHtml.mainNews();
 newsClickEvents.submitfunction();
 newsClickEvents.deleteButtonFunction();
+newsClickEvents.editButtonFunction();
+newsClickEvents.saveButtonFunction();
+
+
+
 
 // sendChatButtonFunction()
 // <button id="Send" type="submit">Send</button>

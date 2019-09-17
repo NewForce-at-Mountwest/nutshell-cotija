@@ -25,10 +25,15 @@ const apiNews = {
     })
   },
 
-  // Edit an Etry
-  editOneNewsEntry(editEntryParam) {
-    return fetch(`http://localhost:3000/news/${editEntryParam}`, {
-      method: "Put",
+  getOneNewsEntry: id => {
+    return fetch(`http://localhost:3000/news/${id}`)
+    .then(response => response.json())
+  },
+
+  // Edit an Entry
+  editOneNewsEntry(id, editEntryParam) {
+    return fetch(`http://localhost:3000/news/${id}`, {
+      method: "PUT",
       headers: {
         "Content-Type": "application/json"
       },

@@ -26,7 +26,7 @@ const newsBuildHtml= {
     buildNewsCard:(singleEntry)=>{
 
         return `<h3 id= "jsonTitle">${singleEntry.title}</h3>
-                <p id = "jsonUrl">${singleEntry.url}</p>
+                <a id = "jsonUrl" href="${singleEntry.url}">${singleEntry.url}</a>
                 <p id = "jsonSynopsis">${singleEntry.synopsis}</p>
                 <button id= "news-button-delete-${singleEntry.id}">Delete</button>
                 <button id= "news-button-edit-${singleEntry.id}">Edit</button>`
@@ -36,17 +36,17 @@ const newsBuildHtml= {
         return `<fieldset>
         <label for="newsTitle">Title</label>
         <br>
-        <input type="text" name="newsTitle" id="${singleEntry.id} value="${singleEntry.title}">
+        <input type="text" name="newsTitle" id="edit-title-${singleEntry.id}" value="${singleEntry.title}">
         <br>
         <label for="newsUrl">Url Link</label>
         <br>
-        <input type="text" name="newsUrl" id="${singleEntry.id}" value ="${singleEntry.url}>
+        <input type="text" name="newsUrl" id="edit-url-${singleEntry.id}" value ="${singleEntry.url}">
         <br>
         <label for="newsSum">Synopsis</label>
         <br>
-        <input type ="text" name="newsSum" id="${singleEntry.id}" value ="${singleEntry.synopsis}>
+        <input type ="text" name="newsSum" id="edit-sum-${singleEntry.id}" value ="${singleEntry.synopsis}">
 
-        <button id ="news-submit-button-edit-${singleEntry.id}" type ="submit">Submit News Entry</button>
+        <button id ="news-save-button-${singleEntry.id}" type ="submit">Save</button>
         </fieldset>`
     }
 
