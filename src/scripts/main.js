@@ -13,6 +13,7 @@ registerClickEvents.createAccount();
 taskClickEvents.buildTask();
 taskClickEvents.deleteTask();
 
+
 // <--- CLICK EVENT FOR PRINTING TASKS TO DOM --->
 taskApiManager.getTasks().then(parsedTasks => {
 	taskDomPrinter.printTasks(parsedTasks);

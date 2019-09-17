@@ -6,8 +6,8 @@ const taskDomPrinter = {
 		//select container to output to
 		document.querySelector("#task-output").innerHTML = "";
 		//empty string to build upon
-        let tasksString = "";
-        //loop through the array of tasks
+		let tasksString = "";
+		//loop through the array of tasks
 		for (let i = 0; i < arrayOfTasks.length; i++) {
 			tasksString += tasksHTML.buildTasks(arrayOfTasks[i]);
 		}
@@ -19,6 +19,10 @@ const taskDomPrinter = {
 		// Build HTML string for individual entry
 		const tasksString = tasksHTML.buildTask(singleTask);
 		// Add HTML string to DOM
+		document.querySelector("#task-output").innerHTML += tasksString;
+	},
+	printTaskEditForm: taskToEdit => {
+		const tasksString = tasksHTML.editSingleTask(taskToEdit);
 		document.querySelector("#task-output").innerHTML += tasksString;
 	}
 };

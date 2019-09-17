@@ -6,6 +6,16 @@ const taskClickEvents = {
 	// <--- FUNCTION TO BUILD TASK --->
 	buildTask: () => {
 		// <--- SELECT CREATE TASK BUTTON AND CREATE CLICK EVENT --->
+		taskApiManager
+			.getTasks()
+			.then(parsedTasks => {
+				taskDomPrinter.printTasks(parsedTasks);
+			})
+			.then(() => {
+				document.querySelector("body").addEventListener("click", function() {
+					taskClickEvents.editTask();
+				});
+			});
 		document
 			.querySelector("#create-task-button")
 			.addEventListener("click", function() {
@@ -24,9 +34,9 @@ const taskClickEvents = {
 	deleteTask: () => {
 		// <--- SELECT DELETE TASK BUTTON AND CREATE CLICK EVENT --->
 		document.querySelector("body").addEventListener("click", function() {
-			if (event.target.id.includes("delete-task")) {
+			if (event.target.id.includes("delete-task-button")) {
 				// <--- SELECT CORRECT ID OF JSON ENTRY TO DELETE AND STORE IT IN A VARIABLE --->
-				const taskToDelete = event.target.id.split("-")[2];
+				const taskToDelete = event.target.id.split("-")[3];
 				// <--- CALL THE API MANAGER FUNCTION TO DELETE ENTRY FROM THE JSON --->
 				taskApiManager
 					.deleteTask(taskToDelete)
@@ -38,10 +48,10 @@ const taskClickEvents = {
 		});
 	},
 	editTask: () => {
-		if (event.target.id.includes("edit-task")) {
-			const idToGet = event.target.id.split("-")[2];
-			taskApiManager.editTask(idToGet).then(parsedTask => {
-				taskDomPrinter.printSingleTask(parsedTask);
+		if (event.target.id.includes("edit-task-button")) {
+			const idToGet = event.target.id.split("-")[3];
+			taskApiManager.getOneTask(idToGet).then(parsedTask => {
+				taskDomPrinter.printTaskEditForm(parsedTask);
 			});
 		}
 		if (event.target.id.includes("save-task-edit-")) {
@@ -51,10 +61,15 @@ const taskClickEvents = {
 			// Get the value of the input
 			const editedTaskValue = document.querySelector(
 				`#edit-task-input-${idToGet}`
-            ).value;
-            const editedTaskEntry = {
-                task: editedTaskValue,
-            };
+			).value;
+			const editedTaskEntry = {
+				task: editedTaskValue
+			};
+			taskApiManager.editTask(idToGet, editedTaskEntry).then(() => {
+				taskApiManager.getTasks().then(allTasks => {
+					taskDomPrinter.printTasks(allTasks);
+				});
+			});
 		}
 	}
 };

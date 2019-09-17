@@ -7,16 +7,13 @@ const tasksHTML = {
         <section class="task-card" id="task-card-${taskObject.id}">
           <h3><b>${taskObject.user.username}</b></h3>
             <p>${taskObject.task}</p>
-                <button id="edit-task-${taskObject.id}">Edit</button>
-                <button id="delete-task-${taskObject.id}">Delete</button>
+                <button id="edit-task-button-${taskObject.id}">Edit</button>
+                <button id="delete-task-button-${taskObject.id}">Delete</button>
         </section>
                 `;
 	},
 	editSingleTask: taskObject => {
-		const targetCard = document.querySelector(
-			`#task-card-${taskObject.id}`
-		);
-
+		const targetCard = document.querySelector(`#task-card-${taskObject.id}`);
 		targetCard.innerHTML += `
           <section>
           <h5>Edit Entry</h5>

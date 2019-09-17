@@ -34,7 +34,7 @@ const taskApiManager = {
 			headers: {
 				"Content-Type": "application/json"
 			},
-			body: JSON.stringify(taskToEdit)
+			body: JSON.stringify(taskToEdit).then(response => response.json())
 		})
 };
 
