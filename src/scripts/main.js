@@ -1,11 +1,11 @@
 import registerClickEvents from "./ClickEvents/UsersRegisterClicks.js"
-
 import Login from "./ClickEvents/LoginClickEvents.js"
-import sendChatButtonFunction from "../ClickEvents/ChatClicks.js"
-import renderChat from "../domPrinter/ChatPrinter.js"
-import apiChat from "../apiManagers/Chatapi.js"
+import sendChatButtonFunction from "./ClickEvents/ChatClicks.js"
+import renderChat from "./domPrinter/ChatPrinter.js"
+import apiChat from "./apiManagers/Chatapi.js"
 registerClickEvents.createAccount()
 Login.loginClickEvent()
+
 apiChat.getAllMessages()
 .then(parsedMessages=>{
     renderChat.buildChatCard(parsedMessages)})
@@ -15,7 +15,6 @@ document.querySelector("#chatroom").innerHTML+= `<fieldset>
 <br>
 <input type="text" name="chat" id="Chatinput">
 </fieldset>
-<button id="Send" type="submit">Send</button>
-<button id="Sendmsg" type="submit">Send</button>;`
+<button id="Sendmsg" type="submit">Send</button>`
 // calls function to send a new message to json and reprint
 sendChatButtonFunction()
