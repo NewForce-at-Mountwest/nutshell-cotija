@@ -6,6 +6,9 @@ const newsBuildHtml= {
  document.querySelector("#newsContainerA").innerHTML =
  `
         <fieldset>
+        <label for="Date">Date</label>
+        <br>
+        <input type="date" name="newsDate" id= "news-date">
         <label for="newsTitle">Title</label>
         <br>
         <input type="text" name="newsTitle" id="news-title">
