@@ -22,7 +22,7 @@ document.querySelector("#login-button").addEventListener("click", () => {
     if (user[0].UserPassword === passwordValue.value) {
       // If the passwords match, store the id in local storage
       localStorage.setItem("userId", user[0].id);
-      document.querySelector("#chatroom").innerHTML+= `<fieldset>
+      document.querySelector("#chatroom").innerHTML= `<fieldset>
       <label for="chat">Chatroom</label>
       <br>
       <input type="text" name="chat" id="Chatinput">
