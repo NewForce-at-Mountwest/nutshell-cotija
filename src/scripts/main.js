@@ -25,4 +25,3 @@ registerClickEvents.createAccount()
 Login.loginClickEvent()
 Event.eventClickEvent()
 
-

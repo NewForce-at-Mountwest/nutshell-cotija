@@ -5,6 +5,5 @@ const renderChat = {
         document.querySelector("#chat").innerHTML = "";
         arrayParam.forEach(singlemessage=>
             {document.querySelector("#chat").innerHTML += Chatinfo.buildChatCard(singlemessage)})
-    }
-}
+    }}
 export default renderChat
