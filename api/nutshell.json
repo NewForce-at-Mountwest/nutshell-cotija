@@ -67,7 +67,7 @@
       "id": 11
     }
   ],
-  "Messages": [
+  "messages": [
     {
       "id": 1,
       "userId": 1,
@@ -197,6 +197,11 @@
       "message": "a",
       "userId": "5",
       "id": 26
+    },
+    {
+      "message": "why?",
+      "userId": "2",
+      "id": 27
     }
   ],
   "News": [
