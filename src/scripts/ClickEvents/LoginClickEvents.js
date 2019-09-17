@@ -2,9 +2,12 @@ import apiManager from "../apiManagers/UsersLoginAPI.js"
 import sendChatButtonFunction from "./ChatClicks.js"
 import renderChat from "../domPrinter/ChatPrinter.js"
 import apiChat from "../apiManagers/Chatapi.js"
-const Login ={
-loginClickEvent:()=>{
-// ------- CLICK EVENT FOR LOGIN----------------//
+
+// code for the login click event
+
+const Login = {
+  loginClickEvent: () => {
+
 document.querySelector("#login-button").addEventListener("click", () => {
 
   // Get the username and password values from the form
@@ -43,4 +46,5 @@ document.querySelector("#login-button").addEventListener("click", () => {
       console.log("Incorrect password!");
     }})})}}
 
-    export default Login
+
+export default Login
