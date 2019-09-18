@@ -1,4 +1,4 @@
-//build card that will be used for printing tasks
+//build cards that will be used for printing tasks and the task edit form
 const tasksHTML = {
 	//function for building task card
 	buildTasks: taskObject => {

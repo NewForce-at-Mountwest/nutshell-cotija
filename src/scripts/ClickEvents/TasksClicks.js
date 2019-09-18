@@ -57,46 +57,56 @@ const taskClickEvents = {
 	},
 	// <--- FUNCTION TO EDIT TASK --->
 	editTask: () => {
-		// <--- SELECT DELETE TASK BUTTON AND CREATE CLICK EVENT --->
+		// <--- SELECT EDIT TASK BUTTON AND CREATE CLICK EVENT --->
 		if (event.target.id.includes("edit-task-button")) {
-			// <--- SELECT CORRECT ID OF JSON ENTRY TO DELETE AND STORE IT IN A VARIABLE --->
+			// <--- SELECT CORRECT ID OF JSON ENTRY TO EDIT AND STORE IT IN A VARIABLE --->
 			const idToGet = event.target.id.split("-")[3];
+			// <--- GET ONE TASK WITH APIMANAGER AND PRINT THE EDIT FORM --->
 			taskApiManager.getOneTask(idToGet).then(parsedTask => {
 				taskDomPrinter.printTaskEditForm(parsedTask);
 			});
 		}
+		// <--- SELECT SAVE TASK BUTTON --->
 		if (event.target.id.includes("save-task-edit-")) {
-			// Get the id of the thing we want to edit
+			// <--- SELECT CORRECT ID OF JSON ENTRY TO SAVE AND STORE IT IN A VARIABLE --->
 			const idToGet = event.target.id.split("-")[4];
 
-			// Get the value of the input
+			// <--- GET THE VALUE OF THE TASK EDIT FIELD --->
 			const editedTaskValue = document.querySelector(
 				`#edit-task-input-${idToGet}`
 			).value;
+			// <--- GET THE VALUE OF THE COMPLETION EDIT FIELD --->
 			const editedCompletionDate = document.querySelector(
 				`#edit-task-date-${idToGet}`
 			).value;
 
+			// <--- STORE THE EDITED TASK IN AN OBJECT --->
 			const editedTaskEntry = {
 				userId: parseInt(localStorage.getItem("activeUser")),
 				task: editedTaskValue,
 				completionDate: editedCompletionDate,
 				completed: false
 			};
+			// <--- USE APIMANAGER FUNCTION TO PUT EDITED OBJECT TO JSON --->
 			taskApiManager.editTask(idToGet, editedTaskEntry).then(() => {
+                // <--- FETCH AND PRINT ALL TASKS AGAIN TO REFRESH PAGE --->
 				taskApiManager.getTasks().then(allTasks => {
 					taskDomPrinter.printTasks(allTasks);
 				});
 			});
 		}
 	},
+	// <--- FUNCTION TO ADD CLICK EVENT TO CHECKBOXES AND UPDATE COMPLETION STATUS TO TRUE --->
 	checkTask: () => {
+		// <--- SELECT BODY FOR GENERAL CLICK EVENT --->
 		document.querySelector("body").addEventListener("click", function() {
+			// <--- CLICK EVENT ACTIVATES ON CHECKBOX CLICK --->
 			if (event.target.id.includes("task-checkbox")) {
+				// <--- SELECT THE ID --->
 				const idToGet = event.target.id.split("-")[2];
-				console.log(idToGet);
-				debugger;
+				// <--- PATCH BOOLEAN OF TRUE TO JSON SERVER --->
 				taskApiManager.markAsComplete(idToGet).then(() => {
+					// <--- FETCH AND PRINT ALL TASKS AGAIN TO REFRESH PAGE --->
 					taskApiManager.getTasks().then(allTasks => {
 						taskDomPrinter.printTasks(allTasks);
 					});
