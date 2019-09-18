@@ -4,9 +4,10 @@ import sendChatButtonFunction from "./ClickEvents/ChatClicks.js"
 import renderChat from "../scripts/domPrinter/ChatPrinter.js"
 import apiChat from "../scripts/apiManagers/Chatapi.js"
 import newsBuildHtml from "./BuildHtmlScripts/NewsBuildHtml.js";
-import Login from "../scripts/ClickEvents/LoginClickEvents.js"
-import apiNews from "./apiManagers/Newsapi.js";
-import printNewsToDom from "./domPrinter/NewsPrinter.js"
+import Login from "../scripts/ClickEvents/LoginClickEvents.js";
+import Event from "../scripts/ClickEvents/EventsClicks.js"
+// import apiNews from "./apiManagers/Newsapi.js";
+// import printNewsToDom from "./domPrinter/NewsPrinter.js"
 
 
 // brings all messages to the DOM
@@ -38,8 +39,8 @@ newsClickEvents.saveButtonFunction();
 
 sendChatButtonFunction()
 
-import Login from "../scripts/ClickEvents/LoginClickEvents.js"
-import Event from "../scripts/ClickEvents/EventsClicks.js"
+// import Login from "../scripts/ClickEvents/LoginClickEvents.js"
+
 
 
 registerClickEvents.createAccount()

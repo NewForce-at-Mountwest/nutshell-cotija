@@ -4,7 +4,7 @@
 const apiNews = {
   // Grab all Entries
   getAllEntries: () =>
-    fetch(" http://localhost:3000/news")
+    fetch(" http://localhost:3000/news?_sort=date&_order=desc")
       .then(response => response.json())
   ,
 

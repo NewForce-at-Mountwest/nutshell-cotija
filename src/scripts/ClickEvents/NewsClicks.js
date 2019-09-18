@@ -15,6 +15,8 @@ const newsClickEvents = {
         document.querySelector("#news-submit-button").addEventListener("click", function () {
             console.log("Youve clicked the Test Button")
 
+            const newsDateInput = document.querySelector("#news-date").value;
+
             const newsTitleInput = document.querySelector("#news-title").value;
 
             const newsUrlInput = document.querySelector("#news-url").value;
@@ -24,6 +26,7 @@ const newsClickEvents = {
             console.log(newsTitleInput, newsUrlInput, newsSumInput);
 
             const newsObjectToPost = {
+                date: newsDateInput,
                 title: newsTitleInput,
                 url: newsUrlInput,
                 synopsis: newsSumInput,
@@ -87,6 +90,8 @@ const newsClickEvents = {
                 const idOfEntryAfterEditToSave = event.target.id.split("-")[3]
                 console.log(idOfEntryAfterEditToSave);
 
+                const editedNewsDateInput = document.querySelector(`#edit-date-${idOfEntryAfterEditToSave}`).value;
+
                 const editedNewsTitleInput = document.querySelector(`#edit-title-${idOfEntryAfterEditToSave}`).value;
 
                 const editedNewsUrlInput = document.querySelector(`#edit-url-${idOfEntryAfterEditToSave}`).value;
@@ -96,6 +101,7 @@ const newsClickEvents = {
                 console.log(editedNewsTitleInput, editedNewsUrlInput, editedNewsSumInput);
 
                 const editedNewsObject = {
+                    date: editedNewsDateInput,
                     title: editedNewsTitleInput,
                     url: editedNewsUrlInput,
                     synopsis: editedNewsSumInput,

@@ -28,7 +28,8 @@ const newsBuildHtml= {
 
     buildNewsCard:(singleEntry)=>{
 
-        return `<h3 id= "jsonTitle">${singleEntry.title}</h3>
+        return `<p id= "jsonDate">${singleEntry.date}</p>
+                <h3 id= "jsonTitle">${singleEntry.title}</h3>
                 <a id = "jsonUrl" href="${singleEntry.url}">${singleEntry.url}</a>
                 <p id = "jsonSynopsis">${singleEntry.synopsis}</p>
                 <button id= "news-button-delete-${singleEntry.id}">Delete</button>
@@ -37,6 +38,9 @@ const newsBuildHtml= {
 
     editNewsCard:(singleEntry)=>{
         return `<fieldset>
+        <label for="Date">Date</label>
+        <br>
+        <input type="date" name="newsDate" id= "edit-date-${singleEntry.id}" value="${singleEntry.date}">
         <label for="newsTitle">Title</label>
         <br>
         <input type="text" name="newsTitle" id="edit-title-${singleEntry.id}" value="${singleEntry.title}">
