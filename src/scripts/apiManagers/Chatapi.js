@@ -18,15 +18,16 @@ const apiChat = {
       body: JSON.stringify(MessageObject)
     })
   },
-  deleteOneMessage: (idofDeleteMessage) => fetch(`http://localhost:3000/messages/${idofDeleteMessage}`,{
+  deleteOneMessage: (idofDeleteMessage) =>{ return fetch(`http://localhost:3000/messages/${idofDeleteMessage}`,{
     method:"DELETE"
-  }),
-  editOneMessage:(idofEditMessage, MessageObject) => fetch(`http://localhost:3000/message/${idofEditMessage}`,{
+  })},
+  editOneMessage:(idofEditMessage, MessageObject) => {
+    return fetch(`http://localhost:3000/messages/${idofEditMessage}`,{
     method:"PUT",
     headers:{
       "Content-Type": "application/json"
     },
     body:JSON.stringify(MessageObject)
   })
-}
+}}
 export default apiChat

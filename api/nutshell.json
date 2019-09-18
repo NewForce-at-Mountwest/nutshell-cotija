@@ -25,18 +25,6 @@
       "id": 18
     },
     {
-      "username": "Steve",
-      "email": "me@me.com",
-      "UserPassword": "TheMonkey",
-      "id": 9
-    },
-    {
-      "username": "Steve",
-      "email": "me@me.com",
-      "UserPassword": "TheMonkey",
-      "id": 10
-    },
-    {
       "username": "",
       "email": "",
       "UserPassword": "",
@@ -51,49 +39,29 @@
   ],
   "messages": [
     {
-      "id": 1,
-      "userId": 1,
-      "message": "What's up?"
-    },
-    {
-      "id": 2,
-      "userId": 2,
-      "message": "Hello"
-    },
-    {
-      "message": "sup",
-      "userId": 3,
-      "id": 3
-    },
-    {
-      "message": "hey",
-      "userId": "1",
-      "id": 5
-    },
-    {
-      "message": "waddp",
-      "userId": 3,
+      "message": "Fred?if youre real you'd better tell me right now",
+      "userId": "3",
       "id": 6
     },
     {
-      "message": "who are you?",
-      "userId": "1",
+      "message": "u'd better tell me right now",
+      "userId": "3",
       "id": 7
     },
     {
-      "message": "who am i",
-      "userId": "2",
-      "id": 8
+      "message": "??",
+      "userId": "11",
+      "id": 10
     },
     {
-      "message": "i am an a ",
-      "userId": "4",
-      "id": 9
+      "message": "??",
+      "userId": "11",
+      "id": 11
     },
     {
-      "message": "why?",
-      "userId": "2",
-      "id": 27
+      "message": "??",
+      "userId": "11",
+      "id": 12
     }
   ],
   "news": [

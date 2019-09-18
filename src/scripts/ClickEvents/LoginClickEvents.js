@@ -7,7 +7,6 @@ const Login = {
   loginClickEvent: () => {
     document.querySelector("#login-button").addEventListener("click", () => {
       // Get the username and password values from the form
-      console.log("the button works!")
       const usernameValue = document.querySelector("#username-input");
       const passwordValue = document.querySelector("#password-input");
       // Use the username to go to the datbaase and get that user's information
@@ -25,15 +24,14 @@ const Login = {
       <input type="text" name="chat" placeholder="New Message" id="Chatinput">
       </fieldset>
       <button id="Sendmsg" type="submit">Send</button>`
-
-          apiChat.getAllMessages()
-            .then(parsedMessages => {
-              renderChat.buildChatCard(parsedMessages)
-            })
-            ChatButtons.editChatMessage()
-            ChatButtons.sendChatButton()
-            ChatButtons.deleteChatMessage()
-            ChatButtons.sendChatButton()
+apiChat.getAllMessages()
+.then(parsedMessages=>{
+ renderChat.buildChatCard(parsedMessages)
+})
+          ChatButtons.editChatMessage()
+          ChatButtons.sendChatButton()
+          ChatButtons.deleteChatMessage()
+          ChatButtons.saveChatMessage()
           usernameValue.value = ""
           passwordValue.value = ""
         } else {
