@@ -2,10 +2,10 @@
 
 const taskApiManager = {
 	//get all the tasks from JSON and parse them to JS
-	getTasks: (userId) => {
-		return fetch(`http://localhost:3000/tasks/${userId}`).then(response =>
-			response.json()
-		);
+	getTasks: userId => {
+		return fetch(
+			`http://localhost:3000/tasks?userid=${userId}&&completed=false`
+		).then(response => response.json());
 	},
 	createTask: taskToCreate =>
 		//create one task and post it to the JSON server
@@ -42,16 +42,7 @@ const taskApiManager = {
 			headers: {
 				"Content-Type": "application/json"
 			},
-			body: JSON.stringify({ completed: "true" })
-		});
-	},
-	markAsIncomplete: id => {
-		return fetch(`http://localhost:3000/tasks/${id}`, {
-			method: "PATCH",
-			headers: {
-				"Content-Type": "application/json"
-			},
-			body: JSON.stringify({ completed: "false" })
+			body: JSON.stringify({ completed: true })
 		});
 	}
 };

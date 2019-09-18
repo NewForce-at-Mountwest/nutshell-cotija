@@ -6,8 +6,9 @@ const tasksHTML = {
 		return `
         <section class="task-card" id="task-card-${taskObject.id}">
                 <br>
-                <input type="checkbox" id="task-checkbox-${taskObject.id}></input>
+                <input type="checkbox" id="task-checkbox-${taskObject.id}"></input>
                 <p id="task-object-thing">${taskObject.task}</p>
+                <p id="task-date-thing">Expected Completion: ${taskObject.completionDate}</p>
                 <button id="edit-task-button-${taskObject.id}">Edit</button>
                 <button id="delete-task-button-${taskObject.id}">Delete</button>
         </section>
@@ -19,6 +20,7 @@ const tasksHTML = {
           <section>
           <h5>Edit Entry</h5>
           <input id="edit-task-input-${taskObject.id}" type="text" value="${taskObject.task}">
+          <input id="edit-task-date-${taskObject.id}" type="date" value="${taskObject.completionDate}">
 		  <button id="save-task-edit-button-${taskObject.id}">Save</button>
 		</section>`;
 	}

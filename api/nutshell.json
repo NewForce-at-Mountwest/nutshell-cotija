@@ -1,213 +1,119 @@
 {
-  "users": [
-    {
-      "id": 1,
-      "username": "Steve",
-      "email": "me@me.com",
-      "userPassword": "TheMonkey"
-    },
-    {
-      "id": 2,
-      "username": "Jacob",
-      "email": "jsnake@perry.com",
-      "userPassword": "TheSnake"
-    },
-    {
-      "username": "Fred",
-      "email": "Fred@mannequin.com",
-      "UserPassword": "TheMannequin",
-      "id": 3
-    },
-    {
-      "username": "ASDAS",
-      "email": "ASDAS",
-      "userPassword": "ASD",
-      "id": 18
-    },
-    {
-      "username": "Steve",
-      "email": "me@me.com",
-      "UserPassword": "TheMonkey",
-      "id": 9
-    },
-    {
-      "username": "Steve",
-      "email": "me@me.com",
-      "UserPassword": "TheMonkey",
-      "id": 10
-    },
-    {
-      "username": "",
-      "email": "",
-      "UserPassword": "",
-      "id": 11
-    }
-  ],
-  "messages": [
-    {
-      "id": 1,
-      "userId": 1,
-      "message": "What's up?"
-    },
-    {
-      "id": 2,
-      "userId": 2,
-      "message": "Hello"
-    },
-    {
-      "message": "sup",
-      "userId": 3,
-      "id": 3
-    },
-    {
-      "message": "sup",
-      "userId": 3,
-      "id": 4
-    },
-    {
-      "message": "hey",
-      "userId": "1",
-      "id": 5
-    },
-    {
-      "message": "waddp",
-      "userId": 3,
-      "id": 6
-    },
-    {
-      "message": "who are you?",
-      "userId": "1",
-      "id": 7
-    },
-    {
-      "message": "who am i",
-      "userId": "2",
-      "id": 8
-    },
-    {
-      "message": "i am an a ",
-      "userId": "4",
-      "id": 9
-    },
-    {
-      "message": "a",
-      "userId": "5",
-      "id": 10
-    },
-    {
-      "message": "a",
-      "userId": "5",
-      "id": 11
-    },
-    {
-      "message": "a",
-      "userId": "5",
-      "id": 12
-    },
-    {
-      "message": "a",
-      "userId": "5",
-      "id": 13
-    },
-    {
-      "message": "a",
-      "userId": "5",
-      "id": 14
-    },
-    {
-      "message": "a",
-      "userId": "5",
-      "id": 15
-    },
-    {
-      "message": "a",
-      "userId": "5",
-      "id": 16
-    },
-    {
-      "message": "a",
-      "userId": "5",
-      "id": 17
-    },
-    {
-      "message": "a",
-      "userId": "5",
-      "id": 18
-    },
-    {
-      "message": "a",
-      "userId": "5",
-      "id": 19
-    },
-    {
-      "message": "a",
-      "userId": "5",
-      "id": 20
-    },
-    {
-      "message": "a",
-      "userId": "5",
-      "id": 21
-    },
-    {
-      "message": "a",
-      "userId": "5",
-      "id": 22
-    },
-    {
-      "message": "a",
-      "userId": "5",
-      "id": 23
-    },
-    {
-      "message": "a",
-      "userId": "5",
-      "id": 24
-    },
-    {
-      "message": "a",
-      "userId": "5",
-      "id": 25
-    },
-    {
-      "message": "a",
-      "userId": "5",
-      "id": 26
-    }
-  ],
-  "news": [
-    {
-      "id": 1,
-      "userId": 2,
-      "url": "https://www.quantamagazine.org/newfound-wormhole-allows-information-to-escape-black-holes-20171023/",
-      "title": "Wormholes Allow Information to Escape Black Holes",
-      "synopsis": "Check out this recent discovery about workholes"
-    }
-  ],
-  "tasks": [
-    {
-      "id": 1,
-      "userId": 2,
-      "task": "Take out garbage",
-      "completed": "false"
-    },
-    {
-      "id": 2,
-      "userId": 1,
-      "task": "pass me that sugar",
-      "completed": "false"
-    },
-    {
-      "userId": 19,
-      "task": "get gud scrub",
-      "id": 3,
-      "completed": "false"
-    },
-    {
-      "userId": 19,
-      "task": "shoop da whoop",
-      "completed": false,
-      "id": 4
-    }
-  ]
+	"users": [
+		{
+			"id": 1,
+			"username": "Steve",
+			"email": "me@me.com",
+			"userPassword": "TheMonkey"
+		},
+		{
+			"id": 2,
+			"username": "Jacob",
+			"email": "jsnake@perry.com",
+			"userPassword": "TheSnake"
+		},
+		{
+			"username": "Fred",
+			"email": "Fred@mannequin.com",
+			"UserPassword": "TheMannequin",
+			"id": 3
+		},
+		{
+			"username": "ASDAS",
+			"email": "ASDAS",
+			"userPassword": "ASD",
+			"id": 18
+		},
+		{
+			"username": "Steve",
+			"email": "me@me.com",
+			"UserPassword": "TheMonkey",
+			"id": 9
+		},
+		{
+			"username": "Steve",
+			"email": "me@me.com",
+			"UserPassword": "TheMonkey",
+			"id": 10
+		},
+		{
+			"username": "",
+			"email": "",
+			"UserPassword": "",
+			"id": 11
+		},
+		{
+			"username": "asd",
+			"email": "asd",
+			"userPassword": "asd",
+			"id": 19
+		}
+	],
+	"messages": [
+		{
+			"id": 1,
+			"userId": 1,
+			"message": "What's up?"
+		},
+		{
+			"id": 2,
+			"userId": 2,
+			"message": "Hello"
+		},
+		{
+			"message": "sup",
+			"userId": 3,
+			"id": 3
+		},
+		{
+			"message": "sup",
+			"userId": 3,
+			"id": 4
+		},
+		{
+			"message": "hey",
+			"userId": "1",
+			"id": 5
+		},
+		{
+			"message": "waddp",
+			"userId": 3,
+			"id": 6
+		},
+		{
+			"message": "who are you?",
+			"userId": "1",
+			"id": 7
+		},
+		{
+			"message": "who am i",
+			"userId": "2",
+			"id": 8
+		}
+	],
+	"news": [
+		{
+			"id": 1,
+			"userId": 2,
+			"url": "https://www.quantamagazine.org/newfound-wormhole-allows-information-to-escape-black-holes-20171023/",
+			"title": "Wormholes Allow Information to Escape Black Holes",
+			"synopsis": "Check out this recent discovery about workholes"
+		}
+	],
+	"tasks": [
+		{
+			"userId": 19,
+			"task": "flip",
+			"completionDate": "2019-09-18",
+			"completed": false,
+			"id": 5
+		},
+		{
+			"userId": 19,
+			"task": "glipglop",
+			"completionDate": "2019-09-26",
+			"completed": false,
+			"id": 6
+		}
+	]
 }

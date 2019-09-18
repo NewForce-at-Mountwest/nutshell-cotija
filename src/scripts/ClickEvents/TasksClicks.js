@@ -6,8 +6,9 @@ const taskClickEvents = {
 	// <--- FUNCTION TO BUILD TASK --->
 	buildTask: () => {
 		// <--- SELECT CREATE TASK BUTTON AND CREATE CLICK EVENT --->
+		const userId = sessionStorage.getItem("activeUser");
 		taskApiManager
-			.getTasks()
+			.getTasks(userId)
 			.then(parsedTasks => {
 				taskDomPrinter.printTasks(parsedTasks);
 			})
@@ -22,8 +23,9 @@ const taskClickEvents = {
 				// <--- CREATE OBJECT TO STORE IN THE JSON AND STORE IT IN A VARIABLE --->
 				const taskToCreate = {
 					userId: parseInt(localStorage.getItem("activeUser")),
-                    task: document.querySelector("#create-task-input").value,
-                    completed: false
+					task: document.querySelector("#create-task-input").value,
+					completionDate: document.querySelector("#task-completion-date").value,
+					completed: false
 				};
 				// <--- CALL THE API MANAGER FUNCTION AND POST THE OBJECT TO THE JSON --->
 				taskApiManager
@@ -53,8 +55,11 @@ const taskClickEvents = {
 			}
 		});
 	},
+	// <--- FUNCTION TO EDIT TASK --->
 	editTask: () => {
+		// <--- SELECT DELETE TASK BUTTON AND CREATE CLICK EVENT --->
 		if (event.target.id.includes("edit-task-button")) {
+			// <--- SELECT CORRECT ID OF JSON ENTRY TO DELETE AND STORE IT IN A VARIABLE --->
 			const idToGet = event.target.id.split("-")[3];
 			taskApiManager.getOneTask(idToGet).then(parsedTask => {
 				taskDomPrinter.printTaskEditForm(parsedTask);
@@ -68,10 +73,15 @@ const taskClickEvents = {
 			const editedTaskValue = document.querySelector(
 				`#edit-task-input-${idToGet}`
 			).value;
+			const editedCompletionDate = document.querySelector(
+				`#edit-task-date-${idToGet}`
+			).value;
+
 			const editedTaskEntry = {
-                userId: parseInt(localStorage.getItem("activeUser")),
-                task: editedTaskValue,
-                completed: false
+				userId: parseInt(localStorage.getItem("activeUser")),
+				task: editedTaskValue,
+				completionDate: editedCompletionDate,
+				completed: false
 			};
 			taskApiManager.editTask(idToGet, editedTaskEntry).then(() => {
 				taskApiManager.getTasks().then(allTasks => {
@@ -79,11 +89,21 @@ const taskClickEvents = {
 				});
 			});
 		}
-    },
-    // checkTask: () => {
-    //     if(event.target.id.includes("#task-checkbox"))
-
-    // }
+	},
+	checkTask: () => {
+		document.querySelector("body").addEventListener("click", function() {
+			if (event.target.id.includes("task-checkbox")) {
+				const idToGet = event.target.id.split("-")[2];
+				console.log(idToGet);
+				debugger;
+				taskApiManager.markAsComplete(idToGet).then(() => {
+					taskApiManager.getTasks().then(allTasks => {
+						taskDomPrinter.printTasks(allTasks);
+					});
+				});
+			}
+		});
+	}
 };
 
 export default taskClickEvents;
