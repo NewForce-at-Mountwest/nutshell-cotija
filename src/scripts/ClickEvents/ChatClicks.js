@@ -48,7 +48,19 @@ editChatMessage:()=>{
 },
 saveChatMessage:()=>{
     return document.querySelector("#chat").addEventListener("click",()=>{
-        if (event.target.id.includes("-"))
+        if (event.target.id.includes("save-msg")){
+            console.log("Click Save")
+            const saveMsgId = event.target.id.split("-")[2]
+            const editedMsg = document.querySelector(`#message-${saveMsgId}`).value;
+            const editedMsgObject ={
+                message : editedMsg,
+                userId: localStorage.getItem("userId")
+            }
+            apiChat.editOneMessage(saveMsgId, editedMsgObject)
+            .then(parsedMessages=>{
+                renderChat.buildChatCard(parsedMessages);
+            })
+        }
     })
 }}
 export default ChatButtons

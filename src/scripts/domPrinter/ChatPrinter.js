@@ -9,7 +9,7 @@ const renderChat = {
     buildEditMessageForm: (MessageToEdit) => {
         const targetMessage = document.querySelector(`#card-${MessageToEdit.id}`)
         targetMessage.innerHTML = `<section>
-        <input id ="message-${MessageToEdit.id}" type="text" value="${MessageToEdit.message}"></section><button id ="save-msg">Save</button>`
+        <input id ="message-${MessageToEdit.id}" type="text" value="${MessageToEdit.message}"></section><button id ="save-msg-${MessageToEdit.id}">Save</button>`
     }
 }
 export default renderChat

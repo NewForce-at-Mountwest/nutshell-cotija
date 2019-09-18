@@ -33,6 +33,7 @@ const Login = {
             ChatButtons.editChatMessage()
             ChatButtons.sendChatButton()
             ChatButtons.deleteChatMessage()
+            ChatButtons.sendChatButton()
           usernameValue.value = ""
           passwordValue.value = ""
         } else {
