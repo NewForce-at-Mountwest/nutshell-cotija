@@ -19,7 +19,7 @@ const tasksHTML = {
 		targetCard.innerHTML += `
           <section>
           <h5>Edit Entry</h5>
-          <input id="edit-task-input-${taskObject.id}" type="text" value="${taskObject.task}">
+          <textarea name="editInput" id="edit-task-input-${taskObject.id}" type="text" value="${taskObject.task}" cols="30" rows="5">${taskObject.task}</textarea>
           <input id="edit-task-date-${taskObject.id}" type="date" value="${taskObject.completionDate}">
 		  <button id="save-task-edit-button-${taskObject.id}">Save</button>
 		</section>`;

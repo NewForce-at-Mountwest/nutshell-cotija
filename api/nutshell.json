@@ -1,119 +1,126 @@
 {
-	"users": [
-		{
-			"id": 1,
-			"username": "Steve",
-			"email": "me@me.com",
-			"userPassword": "TheMonkey"
-		},
-		{
-			"id": 2,
-			"username": "Jacob",
-			"email": "jsnake@perry.com",
-			"userPassword": "TheSnake"
-		},
-		{
-			"username": "Fred",
-			"email": "Fred@mannequin.com",
-			"UserPassword": "TheMannequin",
-			"id": 3
-		},
-		{
-			"username": "ASDAS",
-			"email": "ASDAS",
-			"userPassword": "ASD",
-			"id": 18
-		},
-		{
-			"username": "Steve",
-			"email": "me@me.com",
-			"UserPassword": "TheMonkey",
-			"id": 9
-		},
-		{
-			"username": "Steve",
-			"email": "me@me.com",
-			"UserPassword": "TheMonkey",
-			"id": 10
-		},
-		{
-			"username": "",
-			"email": "",
-			"UserPassword": "",
-			"id": 11
-		},
-		{
-			"username": "asd",
-			"email": "asd",
-			"userPassword": "asd",
-			"id": 19
-		}
-	],
-	"messages": [
-		{
-			"id": 1,
-			"userId": 1,
-			"message": "What's up?"
-		},
-		{
-			"id": 2,
-			"userId": 2,
-			"message": "Hello"
-		},
-		{
-			"message": "sup",
-			"userId": 3,
-			"id": 3
-		},
-		{
-			"message": "sup",
-			"userId": 3,
-			"id": 4
-		},
-		{
-			"message": "hey",
-			"userId": "1",
-			"id": 5
-		},
-		{
-			"message": "waddp",
-			"userId": 3,
-			"id": 6
-		},
-		{
-			"message": "who are you?",
-			"userId": "1",
-			"id": 7
-		},
-		{
-			"message": "who am i",
-			"userId": "2",
-			"id": 8
-		}
-	],
-	"news": [
-		{
-			"id": 1,
-			"userId": 2,
-			"url": "https://www.quantamagazine.org/newfound-wormhole-allows-information-to-escape-black-holes-20171023/",
-			"title": "Wormholes Allow Information to Escape Black Holes",
-			"synopsis": "Check out this recent discovery about workholes"
-		}
-	],
-	"tasks": [
-		{
-			"userId": 19,
-			"task": "flip",
-			"completionDate": "2019-09-18",
-			"completed": false,
-			"id": 5
-		},
-		{
-			"userId": 19,
-			"task": "glipglop",
-			"completionDate": "2019-09-26",
-			"completed": false,
-			"id": 6
-		}
-	]
+  "users": [
+    {
+      "id": 1,
+      "username": "Steve",
+      "email": "me@me.com",
+      "userPassword": "TheMonkey"
+    },
+    {
+      "id": 2,
+      "username": "Jacob",
+      "email": "jsnake@perry.com",
+      "userPassword": "TheSnake"
+    },
+    {
+      "username": "Fred",
+      "email": "Fred@mannequin.com",
+      "UserPassword": "TheMannequin",
+      "id": 3
+    },
+    {
+      "username": "ASDAS",
+      "email": "ASDAS",
+      "userPassword": "ASD",
+      "id": 18
+    },
+    {
+      "username": "Steve",
+      "email": "me@me.com",
+      "UserPassword": "TheMonkey",
+      "id": 9
+    },
+    {
+      "username": "Steve",
+      "email": "me@me.com",
+      "UserPassword": "TheMonkey",
+      "id": 10
+    },
+    {
+      "username": "",
+      "email": "",
+      "UserPassword": "",
+      "id": 11
+    },
+    {
+      "username": "asd",
+      "email": "asd",
+      "userPassword": "asd",
+      "id": 19
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "userId": 1,
+      "message": "What's up?"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "message": "Hello"
+    },
+    {
+      "message": "sup",
+      "userId": 3,
+      "id": 3
+    },
+    {
+      "message": "sup",
+      "userId": 3,
+      "id": 4
+    },
+    {
+      "message": "hey",
+      "userId": "1",
+      "id": 5
+    },
+    {
+      "message": "waddp",
+      "userId": 3,
+      "id": 6
+    },
+    {
+      "message": "who are you?",
+      "userId": "1",
+      "id": 7
+    },
+    {
+      "message": "who am i",
+      "userId": "2",
+      "id": 8
+    }
+  ],
+  "news": [
+    {
+      "id": 1,
+      "userId": 2,
+      "url": "https://www.quantamagazine.org/newfound-wormhole-allows-information-to-escape-black-holes-20171023/",
+      "title": "Wormholes Allow Information to Escape Black Holes",
+      "synopsis": "Check out this recent discovery about workholes"
+    }
+  ],
+  "tasks": [
+    {
+      "userId": null,
+      "task": "flip and trip",
+      "completionDate": "2019-09-18",
+      "completed": false,
+      "id": 5
+    },
+    {
+      "userId": null,
+      "task": "glip the glop pop for cops",
+      "completionDate": "2019-09-26",
+      "completed": false,
+      "id": 6
+    },
+    {
+      "userId": null,
+      "task": "BONFIRE BONFIRE BONFIRE BONFIRE",
+      "completionDate": "2019-09-18",
+      "completed": false,
+      "id": 7
+    }
+  ]
 }
