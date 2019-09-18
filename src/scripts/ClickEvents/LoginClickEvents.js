@@ -1,5 +1,5 @@
 import apiManager from "../apiManagers/UsersLoginAPI.js"
-import sendChatButtonFunction from "./ChatClicks.js"
+import ChatButtons from "./ChatClicks.js"
 import renderChat from "../domPrinter/ChatPrinter.js"
 import apiChat from "../apiManagers/Chatapi.js"
 // code for the login click event
@@ -30,9 +30,9 @@ const Login = {
             .then(parsedMessages => {
               renderChat.buildChatCard(parsedMessages)
             })
-          // Prints chat input and button
-          // calls function to send a new message to json and reprint
-          sendChatButtonFunction()
+            ChatButtons.editChatMessage()
+            ChatButtons.sendChatButton()
+            ChatButtons.deleteChatMessage()
           usernameValue.value = ""
           passwordValue.value = ""
         } else {

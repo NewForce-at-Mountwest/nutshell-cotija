@@ -1,8 +1,8 @@
 import apiChat from "../apiManagers/Chatapi.js"
 import renderChat from "../domPrinter/ChatPrinter.js";
 // function to send new object to json and reprint all messages
-function sendChatButtonFunction (){
-document.querySelector("body").addEventListener("click", ()=>{
+const ChatButtons={ sendChatButton: ()=>{
+return document.querySelector("body").addEventListener("click", ()=>{
     // targets button id
     if (event.target.id.includes("Sendmsg")){
         // value of what a user types into chatroom
@@ -19,5 +19,36 @@ apiChat.postOneMessage(msgObject)
 // parses messages
 .then(parsedMessages =>{
     renderChat.buildChatCard(parsedMessages)})
-}})}
-export default sendChatButtonFunction;
+}})},
+ deleteChatMessage: ()=>{
+  return  document.querySelector("#chat").addEventListener("click",()=>{
+        if (event.target.id.includes("delete-message")){
+            const deleteMsgId = event.target.id.split("-")[2]
+            apiChat.deleteOneMessage(deleteMsgId)
+            .then(()=>{
+                apiChat.getAllMessages()
+                .then(parsedMessages =>{
+                    renderChat.buildChatCard(parsedMessages);
+                })
+            })
+        }
+    })
+},
+editChatMessage:()=>{
+    return document.querySelector("#chat").addEventListener("click",()=>{
+        if (event.target.id.includes("edit-message")){
+            console.log("youve clicked edit")
+            const editMsgId = event.target.id.split("-")[2]
+            apiChat.getOneMessage(editMsgId)
+            .then(singleMessage=>{
+                renderChat.buildEditMessageForm(singleMessage)
+            })
+        }
+    })
+},
+saveChatMessage:()=>{
+    return document.querySelector("#chat").addEventListener("click",()=>{
+        if (event.target.id.includes("-"))
+    })
+}}
+export default ChatButtons

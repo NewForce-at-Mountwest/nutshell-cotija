@@ -5,5 +5,11 @@ const renderChat = {
         document.querySelector("#chat").innerHTML = "";
         arrayParam.forEach(singlemessage=>
             {document.querySelector("#chat").innerHTML += Chatinfo.buildChatCard(singlemessage)})
-    }}
+    },
+    buildEditMessageForm: (MessageToEdit) => {
+        const targetMessage = document.querySelector(`#card-${MessageToEdit.id}`)
+        targetMessage.innerHTML = `<section>
+        <input id ="message-${MessageToEdit.id}" type="text" value="${MessageToEdit.message}"></section><button id ="save-msg">Save</button>`
+    }
+}
 export default renderChat
