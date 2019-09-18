@@ -30,33 +30,76 @@
     <div id="chat"></div>
 
 		<section id="top-container">
+			<!-- USERNAME LABEL -->
 			<label for="register-username">Username:</label>
 			<br />
+			<!-- USERNAME BUTTON -->
 			<input type="text" id="register-username" />
 			<br />
+			<!-- EMAIL LABEL -->
 			<label for="register-email">Email:</label>
 			<br />
+			<!-- EMAIL BUTTON -->
 			<input type="text" id="register-email" />
 			<br />
+			<!-- PASSWORD LABEL -->
 			<label for="register-password">Password:</label>
 			<br />
+			<!-- PASSWORD BUTTON -->
 			<input type="text" id="register-password" />
 			<br />
+			<!-- CREATE ACCOUNT BUTTON -->
 			<button id="create-account-button">Create Account</button>
 		</section>
+
+		<!-- SECTION FOR TASK CONTAINER -->
+		<section id="task-container">
+			<!-- CREATE TASK INPUT -->
+			<textarea id="create-task-input" cols="30" rows="5"></textarea>
+            <br />
+            <!-- CREATE TASK COMPLETION DATE -->
+            <label for="taskCompletionDate">Completion Date</label>
+            <input type="date" name="taskCompletionDate" id="task-completion-date"></input>
+            <br>
+			<!-- CREATE TASK BUTTON -->
+			<button id="create-task-button">Create Task</button>
+			<!-- OUTPUT CONTAINER FOR TASKS -->
+			<div id="task-output"></div>
+		</section>
+
 		<!-- chat input is chatroom -->
 		<div id="chatroom"></div>
 		<!-- chat is output -->
 		<div id="chat"></div>
 
+		<div id="login-border">
+			<form id="login-form">
+				<br />Username
+				<input
+					id="username-input"
+					type="text"
+					name="username"
+					value="username"
+				/>
+				<br />
+				<br />
+				Password
+				<input
+					id="password-input"
+					type="text"
+					name="password"
+					value="password"
+				/>
+				<br /><br />
+				<button id="login-button" onclick="window.location.reload();">
+					Login
+				</button>
+			</form>
+		</div>
 <!-- here is the code for the events form -->
 <div id= "events-border">
 		<input id="event-form"></input>
 		<button id="event-button">Submit New Event</button>
 </div>
-
-
-		<section id="tasks-container"></section>
 	</body>
 </html>
-
