@@ -35,6 +35,72 @@
       "email": "asd",
       "userPassword": "asd",
       "id": 19
+    },
+    {
+      "username": "a",
+      "email": "a",
+      "userPassword": "a",
+      "id": 20
+    },
+    {
+      "username": "a",
+      "email": "a",
+      "userPassword": "a",
+      "id": 21
+    },
+    {
+      "username": "a",
+      "email": "",
+      "userPassword": "",
+      "id": 22
+    },
+    {
+      "username": "a",
+      "email": "a",
+      "userPassword": "a",
+      "id": 23
+    },
+    {
+      "username": "a",
+      "email": "a",
+      "userPassword": "a",
+      "id": 24
+    },
+    {
+      "username": "dfa",
+      "email": "ad",
+      "userPassword": "fa",
+      "id": 25
+    },
+    {
+      "username": "ds",
+      "email": "ds",
+      "userPassword": "ds",
+      "id": 26
+    },
+    {
+      "username": "sd",
+      "email": "sd",
+      "userPassword": "sd",
+      "id": 27
+    },
+    {
+      "username": "ads",
+      "email": "ads",
+      "userPassword": "ads",
+      "id": 28
+    },
+    {
+      "username": "gliph",
+      "email": "glaph",
+      "userPassword": "gloph",
+      "id": 29
+    },
+    {
+      "username": "ad",
+      "email": "ad",
+      "userPassword": "ad",
+      "id": 30
     }
   ],
   "messages": [
@@ -49,51 +115,60 @@
       "id": 7
     },
     {
-      "message": "??",
-      "userId": "11",
-      "id": 10
+      "message": "who am i",
+      "userId": "2",
+      "id": 8
     },
     {
-      "message": "??",
-      "userId": "11",
-      "id": 11
-    },
-    {
-      "message": "??",
-      "userId": "11",
-      "id": 12
+      "message": "why?",
+      "userId": "2",
+      "id": 27
     }
   ],
   "news": [
     {
-      "id": 1,
-      "userId": 2,
-      "url": "https://www.quantamagazine.org/newfound-wormhole-allows-information-to-escape-black-holes-20171023/",
-      "title": "Wormholes Allow Information to Escape Black Holes",
-      "synopsis": "Check out this recent discovery about workholes"
+      "date": "2019-09-06",
+      "title": "Nike Pulls New Clothing",
+      "url": "https://sports.theonion.com/nike-recalls-sweat-wicking-shirts-that-pulled-gallons-o-1838185582",
+      "synopsis": "Clothing that soaks sweat pulled from Nike's line",
+      "id": 24
+    },
+    {
+      "date": "2019-09-04",
+      "title": "Testing Order",
+      "url": "Testing Order",
+      "synopsis": "Testing Order",
+      "id": 26
     }
   ],
   "tasks": [
     {
-      "userId": null,
+      "userId": 30,
       "task": "flip and trip",
       "completionDate": "2019-09-18",
       "completed": false,
       "id": 5
     },
     {
-      "userId": null,
+      "userId": 30,
       "task": "glip the glop pop for cops",
       "completionDate": "2019-09-26",
       "completed": false,
       "id": 6
     },
     {
-      "userId": null,
+      "userId": 30,
       "task": "BONFIRE BONFIRE BONFIRE BONFIRE",
       "completionDate": "2019-09-18",
       "completed": false,
       "id": 7
+    },
+    {
+      "userId": 30,
+      "task": "gloppledopple",
+      "completionDate": "2019-09-18",
+      "completed": false,
+      "id": 8
     }
   ]
 }

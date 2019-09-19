@@ -3,13 +3,16 @@ import taskDomPrinter from "../domPrinter/TasksPrinters.js";
 import taskApiManager from "../apiManagers/tasksapi.js";
 // <--- TASK CLICK EVENTS --->
 const taskClickEvents = {
-	// <--- FUNCTION TO BUILD TASK --->
+	// <--- FUNCTION TO BUILD TASKS --->
 	buildTask: () => {
-		// <--- SELECT CREATE TASK BUTTON AND CREATE CLICK EVENT --->
-		const userId = sessionStorage.getItem("activeUser");
+		// <--- STORE ACTIVE USERID IN A VARIABLE --->
+		const userId = localStorage.getItem("userId");
+		// <--- RUN FUNCTION FROM APIMANAGER TO GET ALL TASKS RELATED TO USERID--->
 		taskApiManager
 			.getTasks(userId)
 			.then(parsedTasks => {
+				console.log(parsedTasks);
+				// <--- PRINT ALL RELATED TASKS TO THE DOM--->
 				taskDomPrinter.printTasks(parsedTasks);
 			})
 			.then(() => {
@@ -17,12 +20,13 @@ const taskClickEvents = {
 					taskClickEvents.editTask();
 				});
 			});
+		// <--- SELECT CREATE TASK BUTTON AND CREATE CLICK EVENT --->
 		document
 			.querySelector("#create-task-button")
 			.addEventListener("click", function() {
 				// <--- CREATE OBJECT TO STORE IN THE JSON AND STORE IT IN A VARIABLE --->
 				const taskToCreate = {
-					userId: parseInt(localStorage.getItem("activeUser")),
+					userId: parseInt(localStorage.getItem("userId")),
 					task: document.querySelector("#create-task-input").value,
 					completionDate: document.querySelector("#task-completion-date").value,
 					completed: false
@@ -82,14 +86,14 @@ const taskClickEvents = {
 
 			// <--- STORE THE EDITED TASK IN AN OBJECT --->
 			const editedTaskEntry = {
-				userId: parseInt(localStorage.getItem("activeUser")),
+				userId: parseInt(localStorage.getItem("userId")),
 				task: editedTaskValue,
 				completionDate: editedCompletionDate,
 				completed: false
 			};
 			// <--- USE APIMANAGER FUNCTION TO PUT EDITED OBJECT TO JSON --->
 			taskApiManager.editTask(idToGet, editedTaskEntry).then(() => {
-                // <--- FETCH AND PRINT ALL TASKS AGAIN TO REFRESH PAGE --->
+				// <--- FETCH AND PRINT ALL TASKS AGAIN TO REFRESH PAGE --->
 				taskApiManager.getTasks().then(allTasks => {
 					taskDomPrinter.printTasks(allTasks);
 				});
