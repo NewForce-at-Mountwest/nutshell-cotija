@@ -53,9 +53,9 @@ taskClickEvents.deleteTask();
 taskClickEvents.checkTask();
 
 // <--- CLICK EVENT FOR PRINTING TASKS TO DOM --->
-taskApiManager.getTasks().then(parsedTasks => {
-	taskDomPrinter.printTasks(parsedTasks);
-});
+// taskApiManager.getTasks().then(parsedTasks => {
+// 	taskDomPrinter.printTasks(parsedTasks);
+// });
 
 // <--- end of alex's code beep boop --->
 

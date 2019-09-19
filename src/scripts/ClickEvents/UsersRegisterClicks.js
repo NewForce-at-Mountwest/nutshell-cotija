@@ -10,9 +10,10 @@ const registerClickEvents = {
 					email: document.querySelector("#register-email").value,
 					userPassword: document.querySelector("#register-password").value
 				};
-				registerApiManager.createAccount(accountToCreate).then(parsedUser => {
-					localStorage.setItem("activeUser", parsedUser.id);
-				});
+				registerApiManager.createAccount(
+					accountToCreate.username,
+					accountToCreate
+				);
 				document.querySelector("#register-username").value = "";
 				document.querySelector("#register-email").value = "";
 				document.querySelector("#register-password").value = "";

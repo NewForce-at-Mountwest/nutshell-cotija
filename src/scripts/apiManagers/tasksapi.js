@@ -4,7 +4,7 @@ const taskApiManager = {
 	//get all the tasks from JSON and parse them to JS
 	getTasks: userId => {
 		return fetch(
-			`http://localhost:3000/tasks?userid=${userId}&&completed=false`
+			`http://localhost:3000/tasks?userId=${userId}&&completed=false`
 		).then(response => response.json());
 	},
 	createTask: taskToCreate =>

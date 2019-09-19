@@ -1,122 +1,137 @@
 import apiNews from "../apiManagers/Newsapi.js";
 import printNewsToDom from "../domPrinter/NewsPrinter.js";
-import newsBuildHtml from "../BuildHtmlScripts/NewsBuildHtml.js"
-import { parse } from "url";
+import newsBuildHtml from "../BuildHtmlScripts/NewsBuildHtml.js";
 
 // Click Event for my Test Button
 
 const newsClickEvents = {
+	submitfunction: () => {
+		apiNews
+			.getAllEntries()
+			.then(entries => printNewsToDom.renderNewsEntries(entries));
 
-    submitfunction: () => {
+		document
+			.querySelector("#news-submit-button")
+			.addEventListener("click", function() {
+				console.log("Youve clicked the Test Button");
 
-        apiNews.getAllEntries()
-        .then(entries => printNewsToDom.renderNewsEntries(entries))
+				const newsDateInput = document.querySelector("#news-date").value;
 
-        document.querySelector("#news-submit-button").addEventListener("click", function () {
-            console.log("Youve clicked the Test Button")
+				const newsTitleInput = document.querySelector("#news-title").value;
 
-            const newsDateInput = document.querySelector("#news-date").value;
+				const newsUrlInput = document.querySelector("#news-url").value;
 
-            const newsTitleInput = document.querySelector("#news-title").value;
+				const newsSumInput = document.querySelector("#news-sum").value;
 
-            const newsUrlInput = document.querySelector("#news-url").value;
+				console.log(newsTitleInput, newsUrlInput, newsSumInput);
 
-            const newsSumInput = document.querySelector("#news-sum").value;
+				const newsObjectToPost = {
+					date: newsDateInput,
+					title: newsTitleInput,
+					url: newsUrlInput,
+					synopsis: newsSumInput
+				};
+				// apiNews.getAllEntries()
+				apiNews
+					.saveNewsEntry(newsObjectToPost)
+					.then(apiNews.getAllEntries)
+					.then(entries => printNewsToDom.renderNewsEntries(entries));
+			});
+	},
 
-            console.log(newsTitleInput, newsUrlInput, newsSumInput);
+	// Delete Button Click Event
 
-            const newsObjectToPost = {
-                date: newsDateInput,
-                title: newsTitleInput,
-                url: newsUrlInput,
-                synopsis: newsSumInput,
-            }
-            // apiNews.getAllEntries()
-            apiNews.saveNewsEntry(newsObjectToPost)
-                .then(apiNews.getAllEntries)
-                .then(entries => printNewsToDom.renderNewsEntries(entries))
-        })
-    },
+	deleteButtonFunction: () => {
+		document
+			.querySelector("#newsContainerB")
+			.addEventListener("click", function() {
+				if (event.target.id.includes("delete")) {
+					console.log(event.target.id);
+					console.log(event.target.id.split("-"));
+					console.log(event.target.id.split("-")[1]);
 
-    // Delete Button Click Event
+					const newsEntryArray = event.target.id.split("-");
+					const idOfEntryToDelete = newsEntryArray[3];
+					console.log(idOfEntryToDelete);
 
+					apiNews
+						.deleteNewsEntry(idOfEntryToDelete)
+						.then(apiNews.getAllEntries)
+						.then(parsedEntries => {
+							printNewsToDom.renderNewsEntries(parsedEntries);
+						});
+				}
+			});
+	},
+	editButtonFunction: () => {
+		document
+			.querySelector("#newsContainerB")
+			.addEventListener("click", function() {
+				if (event.target.id.includes("news-button-edit")) {
+					console.log(event.target.id);
+					console.log(event.target.id.split("-"));
+					console.log(event.target.id.split("-")[1]);
 
-    deleteButtonFunction: () => {
-        document.querySelector("#newsContainerB").addEventListener("click", function () {
+					const newsEntryArray = event.target.id.split("-");
+					const idOfEntryToEdit = newsEntryArray[3];
 
-            if (event.target.id.includes("delete")) {
-                console.log(event.target.id)
-                console.log(event.target.id.split("-"));
-                console.log(event.target.id.split("-")[1])
+					apiNews
+						.getOneNewsEntry(idOfEntryToEdit)
+						.then(objectToEdit => printNewsToDom.editNewsEntries(objectToEdit));
+				}
+			});
+	},
+	//    Save News Button in Edit Card
+	saveButtonFunction: () => {
+		document
+			.querySelector("#newsContainerB")
+			.addEventListener("click", function() {
+				if (event.target.id.includes("news-save-button")) {
+					console.log(event.target.id);
+					console.log(event.target.id.split("-"));
+					console.log(event.target.id.split("-")[1]);
 
-                const newsEntryArray = event.target.id.split("-")
-                const idOfEntryToDelete = newsEntryArray[3];
-                console.log(idOfEntryToDelete);
+					const idOfEntryAfterEditToSave = event.target.id.split("-")[3];
+					console.log(idOfEntryAfterEditToSave);
 
-                apiNews.deleteNewsEntry(idOfEntryToDelete)
-                    .then(apiNews.getAllEntries)
-                    .then(parsedEntries => {
-                        printNewsToDom.renderNewsEntries(parsedEntries)
-                    })
+					const editedNewsDateInput = document.querySelector(
+						`#edit-date-${idOfEntryAfterEditToSave}`
+					).value;
 
-            }
-        })
-    },
-    editButtonFunction: () => {
-        document.querySelector("#newsContainerB").addEventListener("click", function () {
-            if (event.target.id.includes("news-button-edit")) {
-                console.log(event.target.id)
-                console.log(event.target.id.split("-"));
-                console.log(event.target.id.split("-")[1])
+					const editedNewsTitleInput = document.querySelector(
+						`#edit-title-${idOfEntryAfterEditToSave}`
+					).value;
 
-                const newsEntryArray = event.target.id.split("-")
-                const idOfEntryToEdit = newsEntryArray[3];
+					const editedNewsUrlInput = document.querySelector(
+						`#edit-url-${idOfEntryAfterEditToSave}`
+					).value;
 
-                apiNews.getOneNewsEntry(idOfEntryToEdit)
-                    .then((objectToEdit) => printNewsToDom.editNewsEntries(objectToEdit))
+					const editedNewsSumInput = document.querySelector(
+						`#edit-sum-${idOfEntryAfterEditToSave}`
+					).value;
 
-            }
-        })
-    },
-    //    Save News Button in Edit Card
-    saveButtonFunction: () => {
-        document.querySelector("#newsContainerB").addEventListener("click", function () {
+					console.log(
+						editedNewsTitleInput,
+						editedNewsUrlInput,
+						editedNewsSumInput
+					);
 
-            if (event.target.id.includes("news-save-button")) {
-                console.log(event.target.id)
-                console.log(event.target.id.split("-"));
-                console.log(event.target.id.split("-")[1])
+					const editedNewsObject = {
+						date: editedNewsDateInput,
+						title: editedNewsTitleInput,
+						url: editedNewsUrlInput,
+						synopsis: editedNewsSumInput
+					};
 
-                const idOfEntryAfterEditToSave = event.target.id.split("-")[3]
-                console.log(idOfEntryAfterEditToSave);
-
-                const editedNewsDateInput = document.querySelector(`#edit-date-${idOfEntryAfterEditToSave}`).value;
-
-                const editedNewsTitleInput = document.querySelector(`#edit-title-${idOfEntryAfterEditToSave}`).value;
-
-                const editedNewsUrlInput = document.querySelector(`#edit-url-${idOfEntryAfterEditToSave}`).value;
-
-                const editedNewsSumInput = document.querySelector(`#edit-sum-${idOfEntryAfterEditToSave}`).value;
-
-                console.log(editedNewsTitleInput, editedNewsUrlInput, editedNewsSumInput);
-
-                const editedNewsObject = {
-                    date: editedNewsDateInput,
-                    title: editedNewsTitleInput,
-                    url: editedNewsUrlInput,
-                    synopsis: editedNewsSumInput,
-                }
-
-
-
-                apiNews.editOneNewsEntry(idOfEntryAfterEditToSave, editedNewsObject)
-                    .then(apiNews.getAllEntries)
-                    .then(parsedEntries => {
-                        printNewsToDom.renderNewsEntries(parsedEntries)
-                    })
-            }
-        })
-    }
-}
+					apiNews
+						.editOneNewsEntry(idOfEntryAfterEditToSave, editedNewsObject)
+						.then(apiNews.getAllEntries)
+						.then(parsedEntries => {
+							printNewsToDom.renderNewsEntries(parsedEntries);
+						});
+				}
+			});
+	}
+};
 
 export default newsClickEvents;
