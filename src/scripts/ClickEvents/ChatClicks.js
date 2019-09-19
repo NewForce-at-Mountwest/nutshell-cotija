@@ -10,7 +10,6 @@ const ChatButtons = {
                 document.querySelector("#chat").innerHTML =""
                 // value of what a user types into chatroom
                 const chatinput = document.querySelector("#Chatinput").value;
-                console.log(chatinput)
                 // new message structure
                 const msgObject = {
                     "message": chatinput,
@@ -43,12 +42,8 @@ const ChatButtons = {
     },
     editChatMessage: () => {
         return document.querySelector("#chat").addEventListener("click", () => {
-
             if (event.target.id.includes("edit-message")) {
-                console.log("youve clicked edit")
                 const editMsgId = event.target.id.split("-")[2]
-                console.log(editMsgId)
-                debugger
                 apiChat.getOneMessage(editMsgId)
                     .then(singleMessage => {
                         Chatinfo.buildEditMessageForm(singleMessage)
@@ -59,9 +54,7 @@ const ChatButtons = {
     saveChatMessage: () => {
         return document.querySelector("#chat").addEventListener("click", () => {
             if (event.target.id.includes("save-msg")) {
-                console.log("Click Save")
                 const saveMsgId = event.target.id.split("-")[2];
-                debugger
                 const editedMsg = document.querySelector(`#message-${saveMsgId}`).value;
                 const editedMsgObject = {
                     "message": editedMsg,
@@ -70,10 +63,7 @@ const ChatButtons = {
                 apiChat.editOneMessage(saveMsgId, editedMsgObject)
                     .then(() => {
                         apiChat.getAllMessages()
-
                             .then(parsedMessages => {
-                                console.log("parsed messages", parsedMessages)
-                                debugger
                                 renderChat.buildChatCard(parsedMessages);
                             })
                     })

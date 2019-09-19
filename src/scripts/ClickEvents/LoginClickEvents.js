@@ -12,9 +12,7 @@ const Login = {
       // Use the username to go to the datbaase and get that user's information
       apiManager.getOneUserByUsername(usernameValue.value).then(user => {
         // User is going to be an array no matter what, so we'll have to delve into the array to get the user's data
-        console.log("This is user", user)
         // Compare the user's password from the db to the information they entered
-        console.log(user[0].UserPassword, passwordValue.value);
         if (user[0].UserPassword === passwordValue.value) {
           // If the passwords match, store the id in local storage
           localStorage.setItem("userId", user[0].id);
@@ -36,7 +34,7 @@ apiChat.getAllMessages()
           passwordValue.value = ""
         } else {
           // Error handling would go here
-          console.log("Incorrect password!");
+          alert("Incorrect password!");
         }
       })
     })

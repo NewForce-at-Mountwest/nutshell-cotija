@@ -11,7 +11,6 @@ const taskClickEvents = {
 		taskApiManager
 			.getTasks(userId)
 			.then(parsedTasks => {
-				console.log(parsedTasks);
 				// <--- PRINT ALL RELATED TASKS TO THE DOM--->
 				taskDomPrinter.printTasks(parsedTasks);
 			})

@@ -115,14 +115,14 @@
       "id": 7
     },
     {
-      "message": "who am i",
-      "userId": "2",
-      "id": 8
+      "message": "Debugger",
+      "userId": "3",
+      "id": 27
     },
     {
-      "message": "why?",
-      "userId": "2",
-      "id": 27
+      "message": "I am Fred hear me roar!!",
+      "userId": "3",
+      "id": 28
     }
   ],
   "news": [
